@@ -358,7 +358,7 @@ CMD [/A | /U] [/Q] [/D] [/E:ON | /E:OFF] [/F:ON | /F:OFF] [/V
 
 ### boost::fusion的算法
 
-对make_builders_from_view中直接使用filter_if这类算法(官方boost::process的做法)，我表示没有看懂。
+对basic_execute_impl中直接使用filter_if这类算法(官方boost::process的做法)，我表示没有看懂。
 fusion中的很多算法，本质上只是对view的一层包装，但却会增加一个副作用，就是给容器加上常量限定。
 如下是filter_if的代码片段：
 
