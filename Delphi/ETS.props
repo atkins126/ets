@@ -52,5 +52,6 @@
     <DCC_ResourcePath>$(DCC_DcuOutput)</DCC_ResourcePath>
     <DCC_ObjPath>$(DCC_UnitSearchPath)</DCC_ObjPath>
     <DCC_IncludePath>$(DCC_UnitSearchPath)</DCC_IncludePath>
+    <DCC_MapFile>3</DCC_MapFile>
   </PropertyGroup>
 </Project>

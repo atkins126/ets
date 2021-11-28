@@ -48,6 +48,9 @@
       InternalDependencyCheck="false"
       ResFiles="$(DCC_DcuOutput)\%(_RCFiles.Filename).res"
       OutputDir="$(DCC_DcuOutput)" />
+    <Copy
+      SourceFiles="$(DCC_DcuOutput)\%(_RCFiles.Filename).res"
+      DestinationFolder="%(_RCFiles.RootDir)%(_RCFiles.Directory)" />
   </Target>
   <Target Name="ResolveOutputs">
     <CreateItem Include="@(DCCReference->'$(DCC_DcuOutput)\%(filename)$(DCCPasFileOutputExt)')"
