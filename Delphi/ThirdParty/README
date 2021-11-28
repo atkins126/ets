@@ -7,5 +7,6 @@
 -|-|-
 DGL|STL的Delphi移植版本|https://github.com/sisong/DGL.git
 GDIPlus|GDI+的Delphi包装|svn://svn.code.sf.net/p/igdiplus/code
+JCL|用于调试目的，获取程序的调用栈|https://github.com/project-jedi/jcl.git
 QDAC3|JSON解释器|git://www.qdac.cc/QDAC3.git
 Scintilla|本作者对Scintilla编辑器的简单二次包装|http://www.scintilla.org
