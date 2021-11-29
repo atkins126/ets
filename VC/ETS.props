@@ -36,9 +36,9 @@
         <BoostLibDir>$(BoostDirWithSlash)lib\</BoostLibDir>
       </PropertyGroup>
     </When>
-    <When Condition="exists('$(BoostDirWithSlash)..\out\lib\')">
+    <When Condition="exists('$(BoostDirWithSlash)..\lib\')">
       <PropertyGroup>
-        <BoostLibDir>$(BoostDirWithSlash)..\out\lib\</BoostLibDir>
+        <BoostLibDir>$(BoostDirWithSlash)..\lib\</BoostLibDir>
       </PropertyGroup>
     </When>
     <Otherwise>

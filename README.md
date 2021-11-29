@@ -54,6 +54,32 @@ UI导出`GetFrame`函数，功能插件导出`GetModule`函数。
 
 ## 程序构建
 
+### 环境准备
+
+* **操作系统**
+  Windows 10家庭版(Win7理论上也支持，不过我本机电脑已经换了Win10，Win7未验证过)。
+* **编译器**
+  需要安装VC2010和Delphi2007。
+  构建脚本会调用MSBuild构建程序，但因为Delphi不是微软亲生的，与MSBuild配合不是太好。
+  构建前，脚本会先读取注册表“HKLM\SOFTWARE\Borland\BDS\5.0”，查找Delphi的安装目录，VC没有此问题。
+* **Git**
+  本项目中使用了boost这类项目，由于文件较大，因此，被单独存放到[build-tools](https://github.com/ets-ddui/build-tools.git)库中，编译时，会调用Git下载相关代码。
+  建议将Git的安装目录添加到环境变量`PATH`中。
+
+### 编译
+
+执行`build.bat`即可，如果一切正常，会在`Out`目录中生成编译结果。
+
+```txt
+RootPath
+|__ets # ETS源码根目录
+|__Out
+   |__Boost # boost的源码及编译后的库文件，功能开发时使用
+   |__Component # 设计时控件组件，可在Delphi IDE中安装
+   |__ETS # 编译出来的程序文件都放在这个目录中，可将整个目录拷贝到其他地方使用
+   |__Temp # 程序编译时产生的中间文件，可删除
+```
+
 ## 后续计划
 
 1. 对Delphi这块，我会慢慢弱化，最后可能仅会保留DDUI控件的实现。
